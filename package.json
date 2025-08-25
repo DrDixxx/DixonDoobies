@@ -1,14 +1,12 @@
 {
   "name": "dixon-doobies",
   "version": "1.0.0",
-  "description": "Dixon Doobies static site served with Express",
-  "main": "server.js",
+  "description": "Dixon Doobies static site",
   "scripts": {
-    "start": "node server.js",
+    "build": "ejs-cli views -o dist --data {} && cp -r public/* dist/",
     "test": "echo 'No tests specified'"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "ejs": "^3.1.9"
+  "devDependencies": {
+    "ejs-cli": "^2.2.1"
   }
 }
