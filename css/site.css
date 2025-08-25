@@ -2,20 +2,46 @@
 html.banner-space { scroll-behavior: smooth; }
 html.banner-space body { padding-top: 4rem; }
 body {
-  background: radial-gradient(1200px 800px at 10% -10%, var(--dd-wash) 0, #ffffff 60%);
+  background-color: #e8f5e9;
   color: var(--dd-ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 0c10 15 10 25 0 40C30 25 30 15 40 0z' fill='%23065f46' fill-opacity='0.05'/%3E%3Cpath d='M0 40c15-10 25-10 40 0C25 50 15 50 0 40z' fill='%23065f46' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
 }
 .container { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
 .section { padding: 4rem 0; }
+.section:not(.relative) {
+  background: rgba(255,255,255,0.8);
+  margin: 2rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 .card {
   background:#fff; border-radius:1rem; box-shadow:0 10px 25px -10px rgba(0,0,0,.15); padding:1.25rem;
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .card:hover { transform: translateY(-2px); box-shadow:0 20px 35px -15px rgba(0,0,0,.2); }
-.btn-primary { background: var(--dd-green); color:#fff; padding:.75rem 1rem; border-radius:.75rem; display:inline-block; }
-.btn-secondary { background:#e5e7eb; color:var(--dd-ink); padding:.75rem 1rem; border-radius:.75rem; display:inline-block; }
+.btn-primary { background: var(--dd-green); color:#fff; padding:.75rem 1rem; border-radius:.75rem; display:inline-block; text-decoration:none; }
+.btn-secondary { background:#e5e7eb; color:var(--dd-ink); padding:.75rem 1rem; border-radius:.75rem; display:inline-block; text-decoration:none; }
+.nav-link {
+  display:inline-block;
+  padding:0.5rem 0.75rem;
+  border-radius:0.5rem;
+  background:rgba(6,95,70,0.1);
+  color:var(--dd-ink);
+  text-decoration:none;
+}
+.nav-link:hover { background:rgba(6,95,70,0.2); }
 .nav-panel { overflow:hidden; max-height:0; transition:max-height .25s ease; background:#fff; border-top:1px solid #e5e7eb; }
-.nav-panel a { display:block; padding:1rem; border-bottom:1px solid #eee; }
+.nav-panel a { display:block; padding:1rem; border-bottom:1px solid #eee; text-decoration:none; }
+.note-link {
+  display:inline-block;
+  padding:0.25rem 0.5rem;
+  border-radius:0.25rem;
+  background:rgba(255,255,255,0.15);
+  color:#fff;
+  text-decoration:none;
+}
+.note-link:hover { background:rgba(255,255,255,0.25); }
 .toast { position: fixed; bottom: 1rem; right: 1rem; background: var(--dd-green); color:#f9fafb; padding: 0.5rem 1rem; border-radius: 0.5rem; }
 @media (prefers-reduced-motion: reduce) {
   .nav-panel, .card { transition: none; }
