@@ -1,0 +1,4 @@
+/* Minimal custom styles */
+.banner-space { padding-top: 3rem; }
+.toast { position: fixed; bottom: 1rem; right: 1rem; background: #064e3b; color: #f9fafb; padding: 0.5rem 1rem; border-radius: 0.25rem; }
+.hidden { display: none; }
