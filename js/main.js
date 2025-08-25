@@ -1,4 +1,6 @@
 (() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function trapFocus(modal) {
     const focusable = modal.querySelectorAll('button, [href], input');
     const first = focusable[0];
@@ -45,31 +47,37 @@
   }
 
   function initNav() {
-    const btn = document.getElementById('nav-toggle');
-    const menu = document.getElementById('nav-menu');
-    if (!btn || !menu) return;
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+    const toggle = document.getElementById('nav-toggle');
+    const panel = document.getElementById('nav-panel');
+    if (!toggle || !panel) return;
+    toggle.addEventListener('click', () => {
+      const open = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+      panel.style.maxHeight = open ? '0px' : panel.scrollHeight + 'px';
     });
+    if (reduceMotion) panel.style.transition = 'none';
   }
 
   function setActiveNav() {
-    const path = location.pathname.replace(/\/$/, '') || '/';
-    document.querySelectorAll('nav a').forEach(link => {
-      if (link.getAttribute('href') === path) {
-        link.classList.add('underline', 'text-green-700');
-      }
-    });
+    const path = location.pathname.replace(/\/$/, '') || '/index.html';
+    document.querySelectorAll('a[href]')
+      .forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === path) {
+          link.classList.add('underline', 'text-green-700');
+        }
+      });
   }
 
   function initFAQ() {
     document.querySelectorAll('[data-accordion]').forEach(item => {
       const btn = item.querySelector('button');
       const panel = item.querySelector('[data-accordion-panel]');
+      const icon = btn.querySelector('svg');
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!expanded));
         panel.classList.toggle('hidden', expanded);
+        icon && icon.classList.toggle('rotate-180', !expanded);
       });
     });
   }
@@ -78,7 +86,7 @@
     document.querySelectorAll('[data-coming-soon]').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
-        showToast('Available at launch.');
+        showToast('Available at launch');
       });
     });
   }
@@ -94,19 +102,10 @@
 
   function initForms() {
     const news = document.getElementById('newsletter-form');
-    if (news) {
-      news.addEventListener('submit', e => {
-        e.preventDefault();
-        news.querySelector('[data-success]').classList.remove('hidden');
-      });
-    }
-    const contact = document.getElementById('contact-form');
-    if (contact) {
-      contact.addEventListener('submit', e => {
-        e.preventDefault();
-        contact.querySelector('[data-success]').classList.remove('hidden');
-      });
-    }
+    news && news.addEventListener('submit', e => {
+      e.preventDefault();
+      news.querySelector('[data-success]').classList.remove('hidden');
+    });
   }
 
   document.addEventListener('DOMContentLoaded', () => {
