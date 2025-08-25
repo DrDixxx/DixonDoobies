@@ -29,3 +29,8 @@ Enable Pages in repository settings and choose the `main` branch with the root f
 - `assets/logo.svg` – swap with your brand logo.
 - Replace the hero placeholder block in `index.html` with a real image if desired.
 - Update `info@example.com` in footers and forms with a real contact email.
+
+## Compliance
+Dixon Doobies serves adults 21+ in Colorado. We do not ship cannabis. Orders will
+be fulfilled via in-store pickup or locally permitted delivery only. All content
+is for educational purposes and not medical or legal advice.
