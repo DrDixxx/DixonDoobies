@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="banner-space">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products – Dixon Doobies</title>
+  <meta name="description" content="Explore the curated Dixon Doobies menu.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14'%3E🌿%3C/text%3E%3C/svg%3E">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/css/site.css" rel="stylesheet">
+</head>
+<body>
+  <div class="fixed top-0 inset-x-0 z-50 bg-green-900 text-white text-center text-xs py-2" role="note">
+    21+ only. No shipping. Orders are for in-store pickup or permitted delivery within Colorado municipalities that allow it.
+    <a href="/knowledge.html" class="underline">Learn more</a>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="container flex items-center justify-between py-4">
+      <a href="/index.html" class="flex items-center"><img src="/assets/logo.svg" alt="Dixon Doobies" class="h-8 w-auto"></a>
+      <nav class="hidden md:flex space-x-8" aria-label="Primary">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/product.html" class="nav-link">Products</a>
+        <a href="/knowledge.html" class="nav-link">Learn</a>
+      </nav>
+      <a href="#newsletter" class="btn-primary hidden md:inline-block">Join Newsletter</a>
+      <button id="nav-toggle" class="md:hidden p-2" aria-label="Toggle navigation">
+        <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <div id="nav-panel" class="nav-panel md:hidden">
+      <a href="/index.html">Home</a>
+      <a href="/product.html">Products</a>
+      <a href="/knowledge.html">Learn</a>
+      <a href="#newsletter">Join Newsletter</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section container text-center">
+      <h1 class="text-5xl font-bold mb-4">[PRODUCTS_TITLE]</h1>
+      <p class="text-xl mb-8">[PRODUCTS_INTRO]</p>
+    </section>
+
+    <section class="section bg-[var(--dd-wash)]">
+      <div class="container grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="card flex flex-col">
+          <img src="https://via.placeholder.com/400x300.png?text=Product+1" alt="" class="rounded mb-4">
+          <h3 class="text-lg font-semibold mb-2">Product One</h3>
+          <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-4">Limited</span>
+          <button data-coming-soon aria-disabled="true" class="btn-primary opacity-50 cursor-not-allowed mt-auto">Add to Cart</button>
+        </div>
+        <div class="card flex flex-col">
+          <img src="https://via.placeholder.com/400x300.png?text=Product+2" alt="" class="rounded mb-4">
+          <h3 class="text-lg font-semibold mb-2">Product Two</h3>
+          <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mb-4">Coming Soon</span>
+          <button data-coming-soon aria-disabled="true" class="btn-primary opacity-50 cursor-not-allowed mt-auto">Add to Cart</button>
+        </div>
+        <div class="card flex flex-col">
+          <img src="https://via.placeholder.com/400x300.png?text=Product+3" alt="" class="rounded mb-4">
+          <h3 class="text-lg font-semibold mb-2">Product Three</h3>
+          <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-4">Limited</span>
+          <button data-coming-soon aria-disabled="true" class="btn-primary opacity-50 cursor-not-allowed mt-auto">Add to Cart</button>
+        </div>
+        <div class="card flex flex-col">
+          <img src="https://via.placeholder.com/400x300.png?text=Product+4" alt="" class="rounded mb-4">
+          <h3 class="text-lg font-semibold mb-2">Product Four</h3>
+          <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mb-4">Coming Soon</span>
+          <button data-coming-soon aria-disabled="true" class="btn-primary opacity-50 cursor-not-allowed mt-auto">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section container text-center">
+      <h2 class="text-3xl font-semibold mb-4">Stay in the loop</h2>
+      <form id="newsletter-form" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+        <label class="sr-only" for="product-news-email">Email address</label>
+        <input id="product-news-email" type="email" required class="flex-1 p-3 border rounded" placeholder="you@example.com">
+        <button type="submit" class="btn-primary">Subscribe</button>
+        <p data-success class="hidden text-green-700 mt-2 sm:mt-0 sm:ml-4" role="status">Thanks for subscribing!</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-100">
+    <div class="container grid gap-8 md:grid-cols-3 section">
+      <div>
+        <h3 class="font-semibold mb-2">Contact</h3>
+        <p><a href="mailto:[CONTACT_EMAIL]" class="underline">[CONTACT_EMAIL]</a></p>
+        <p>[CITY_NAME]</p>
+        <p>[HOURS]</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Compliance</h3>
+        <p class="text-sm">Dixon Doobies serves adults 21+ in Colorado. We do not ship cannabis. Orders will be fulfilled via in-store pickup or locally permitted delivery only.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Social</h3>
+        <div class="flex space-x-4"><span class="w-6 h-6 bg-gray-700 rounded-full"></span><span class="w-6 h-6 bg-gray-700 rounded-full"></span><span class="w-6 h-6 bg-gray-700 rounded-full"></span></div>
+      </div>
+    </div>
+    <div class="text-center pb-4 text-sm">&copy; <span id="year"></span> Dixon Doobies</div>
+  </footer>
+
+  <div id="age-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded max-w-sm text-center space-y-4" role="dialog" aria-modal="true" aria-labelledby="age-title">
+      <h2 id="age-title" class="text-xl font-bold">Are you 21 or older?</h2>
+      <div class="space-x-4">
+        <button data-age-yes class="btn-primary">Yes</button>
+        <button data-age-no class="btn-secondary">No</button>
+      </div>
+      <p data-age-message class="hidden text-red-600 text-sm">You must be 21+ to enter.</p>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

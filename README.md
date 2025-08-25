@@ -1,29 +1,20 @@
-# Dixon Doobies Static Site
+# Dixon Doobies
 
-This repository contains a small website for the Dixon Doobies brand. It uses Node.js with Express and EJS templates along with TailwindCSS via CDN and vanilla JavaScript.
+Static demo site for Dixon Doobies built with plain HTML, Tailwind via CDN, a small CSS file, and minimal JavaScript.
 
-## Run locally
+## Development
 
-```bash
-npm install
-npm start
-```
-
-Visit <http://localhost:3000> in your browser.
+Open `index.html` in your browser to preview. All assets are static; no build step or server is required.
 
 ## Deploy
 
 ### Netlify
-1. Create a new site and link this repository.
-2. Use **npm start** as the build command. Netlify will run the Express server.
+1. Use **Netlify Drop** or connect this repository.
+2. The provided `netlify.toml` publishes the repository root with no build command.
+3. Optional `_redirects` file sends all requests to `index.html` for single-page behaviour.
 
 ### GitHub Pages
-GitHub Pages serves static files only. Render the EJS templates to HTML (for example: `npx ejs-cli views -o dist`) and deploy the generated output directory.
+1. Enable GitHub Pages for the `main` branch.
+2. Pages will serve the site directly from the repository root.
 
-## Future integrations
-- Point-of-sale and METRC-synced menu providers can be added for real-time inventory.
-- Geofencing and IP-based messages may be required for Colorado-only marketing.
-
-## Replacing placeholders
-- Replace `/public/assets/logo.svg` and remote hero images with branded assets.
-- Update the contact email and any social links in the footer.
+No Node, Express, or templating is used—just static files.

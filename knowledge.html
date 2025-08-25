@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="banner-space">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge – Dixon Doobies</title>
+  <meta name="description" content="Learn about cannabis basics, safety, and science.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14'%3E🌿%3C/text%3E%3C/svg%3E">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/css/site.css" rel="stylesheet">
+</head>
+<body>
+  <div class="fixed top-0 inset-x-0 z-50 bg-green-900 text-white text-center text-xs py-2" role="note">
+    21+ only. No shipping. Orders are for in-store pickup or permitted delivery within Colorado municipalities that allow it.
+    <a href="/knowledge.html" class="underline">Learn more</a>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="container flex items-center justify-between py-4">
+      <a href="/index.html" class="flex items-center"><img src="/assets/logo.svg" alt="Dixon Doobies" class="h-8 w-auto"></a>
+      <nav class="hidden md:flex space-x-8" aria-label="Primary">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/product.html" class="nav-link">Products</a>
+        <a href="/knowledge.html" class="nav-link">Learn</a>
+      </nav>
+      <a href="#newsletter" class="btn-primary hidden md:inline-block">Join Newsletter</a>
+      <button id="nav-toggle" class="md:hidden p-2" aria-label="Toggle navigation">
+        <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <div id="nav-panel" class="nav-panel md:hidden">
+      <a href="/index.html">Home</a>
+      <a href="/product.html">Products</a>
+      <a href="/knowledge.html">Learn</a>
+      <a href="#newsletter">Join Newsletter</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section container text-center">
+      <h1 class="text-5xl font-bold mb-4">Learn</h1>
+      <p class="text-xl mb-8">[KNOWLEDGE_INTRO]</p>
+    </section>
+
+    <section class="section bg-[var(--dd-wash)]">
+      <div class="container space-y-12">
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">101</h2>
+          <p>Introductory information about cannabis, its components, and common forms.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Onset &amp; Dosing</h2>
+          <p>Understanding timing and dosage helps tailor your experience.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Safety</h2>
+          <p>Best practices for responsible consumption and storage.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">Science</h2>
+          <p>A glimpse into cannabinoids, terpenes, and ongoing research.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="text-3xl font-semibold text-center mb-8">FAQ</h2>
+      <div class="space-y-4">
+        <div data-accordion class="border-b">
+          <button class="flex justify-between items-center w-full py-4 text-left" aria-expanded="false">
+            <span>Is delivery available?</span>
+            <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div data-accordion-panel class="hidden pb-4">
+            <p>Delivery is limited to municipalities that allow it and requires age verification.</p>
+          </div>
+        </div>
+        <div data-accordion class="border-b">
+          <button class="flex justify-between items-center w-full py-4 text-left" aria-expanded="false">
+            <span>Do you ship products?</span>
+            <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div data-accordion-panel class="hidden pb-4">
+            <p>No. We only allow in-store pickup or permitted local delivery within Colorado.</p>
+          </div>
+        </div>
+        <div data-accordion class="border-b">
+          <button class="flex justify-between items-center w-full py-4 text-left" aria-expanded="false">
+            <span>Where are you located?</span>
+            <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div data-accordion-panel class="hidden pb-4">
+            <p>We serve adults across Colorado with pickup in [CITY_NAME] and delivery where allowed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section bg-[var(--dd-wash)]">
+      <div class="container text-center">
+        <h2 class="text-3xl font-semibold mb-4">Join our newsletter</h2>
+        <form id="newsletter-form" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+          <label class="sr-only" for="knowledge-news-email">Email address</label>
+          <input id="knowledge-news-email" type="email" required class="flex-1 p-3 border rounded" placeholder="you@example.com">
+          <button type="submit" class="btn-primary">Subscribe</button>
+          <p data-success class="hidden text-green-700 mt-2 sm:mt-0 sm:ml-4" role="status">Thanks for subscribing!</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-100">
+    <div class="container grid gap-8 md:grid-cols-3 section">
+      <div>
+        <h3 class="font-semibold mb-2">Contact</h3>
+        <p><a href="mailto:[CONTACT_EMAIL]" class="underline">[CONTACT_EMAIL]</a></p>
+        <p>[CITY_NAME]</p>
+        <p>[HOURS]</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Compliance</h3>
+        <p class="text-sm">Dixon Doobies serves adults 21+ in Colorado. We do not ship cannabis. Orders will be fulfilled via in-store pickup or locally permitted delivery only.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Social</h3>
+        <div class="flex space-x-4"><span class="w-6 h-6 bg-gray-700 rounded-full"></span><span class="w-6 h-6 bg-gray-700 rounded-full"></span><span class="w-6 h-6 bg-gray-700 rounded-full"></span></div>
+      </div>
+    </div>
+    <div class="text-center pb-4 text-sm">&copy; <span id="year"></span> Dixon Doobies</div>
+  </footer>
+
+  <div id="age-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded max-w-sm text-center space-y-4" role="dialog" aria-modal="true" aria-labelledby="age-title">
+      <h2 id="age-title" class="text-xl font-bold">Are you 21 or older?</h2>
+      <div class="space-x-4">
+        <button data-age-yes class="btn-primary">Yes</button>
+        <button data-age-no class="btn-secondary">No</button>
+      </div>
+      <p data-age-message class="hidden text-red-600 text-sm">You must be 21+ to enter.</p>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

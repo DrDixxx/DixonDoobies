@@ -1,0 +1,22 @@
+:root { --dd-green: #065f46; --dd-ink: #111827; --dd-wash: #f5faf7; }
+html.banner-space { scroll-behavior: smooth; }
+html.banner-space body { padding-top: 4rem; }
+body {
+  background: radial-gradient(1200px 800px at 10% -10%, var(--dd-wash) 0, #ffffff 60%);
+  color: var(--dd-ink);
+}
+.container { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+.section { padding: 4rem 0; }
+.card {
+  background:#fff; border-radius:1rem; box-shadow:0 10px 25px -10px rgba(0,0,0,.15); padding:1.25rem;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow:0 20px 35px -15px rgba(0,0,0,.2); }
+.btn-primary { background: var(--dd-green); color:#fff; padding:.75rem 1rem; border-radius:.75rem; display:inline-block; }
+.btn-secondary { background:#e5e7eb; color:var(--dd-ink); padding:.75rem 1rem; border-radius:.75rem; display:inline-block; }
+.nav-panel { overflow:hidden; max-height:0; transition:max-height .25s ease; background:#fff; border-top:1px solid #e5e7eb; }
+.nav-panel a { display:block; padding:1rem; border-bottom:1px solid #eee; }
+.toast { position: fixed; bottom: 1rem; right: 1rem; background: var(--dd-green); color:#f9fafb; padding: 0.5rem 1rem; border-radius: 0.5rem; }
+@media (prefers-reduced-motion: reduce) {
+  .nav-panel, .card { transition: none; }
+}
