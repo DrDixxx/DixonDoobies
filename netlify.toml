@@ -1,0 +1,19 @@
+[build]
+  publish = "."
+  command = ""
+
+# Redirect extensionless paths to their HTML counterparts for local/Netlify parity
+[[redirects]]
+  from = "/shop"
+  to = "/shop.html"
+  status = 200
+
+[[redirects]]
+  from = "/learn"
+  to = "/learn.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200

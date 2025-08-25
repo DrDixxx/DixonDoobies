@@ -16,7 +16,8 @@ Open `index.html` in any modern browser. No build step is required.
 
 ## Deploy
 ### Netlify
-Drag the project folder into the Netlify dashboard or connect the repository and set the site directory to the repository root.
+Netlify uses the included `netlify.toml` to publish the repository root with no build step.
+Drag the folder into the Netlify dashboard or connect the repo and deploy. Extensionless paths like `/shop` redirect to their corresponding HTML files.
 
 ### GitHub Pages
 Enable Pages in repository settings and choose the `main` branch with the root folder.
